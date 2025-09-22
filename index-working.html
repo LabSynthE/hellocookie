@@ -12,6 +12,15 @@
 
     <style>
       /* General Styles */
+      :root {
+        /* CSS HEX */
+      --purple: #9d44b5ff; 
+      --ash-gray: #a1b0abff; 
+      --raspberry: #b5446eff; 
+      --gray: #525252ff; 
+      --tangerine: #f79d84ff;
+        /* --------- */
+      }
       body {
         font-family: Arial, sans-serif;
         padding: 30px;
@@ -163,7 +172,7 @@ x
     </div>
 
     <!-- ✅ START: Bootstrap grid wrapper -->
-    <div class="container py-3">
+    <div class="container py-3" style="background-color: var(--gray)">
       <div class="row g-3">
         <div class="col-12 col-md-6 col-lg-4">
           <label for="age">Computer Age</label>
