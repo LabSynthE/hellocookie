@@ -56,6 +56,7 @@
         padding: 10px 20px;
         font-size: 16px;
         background-color: #4caf50;
+        background-color: var(--tangerine);
         color: white;
         border: none;
         cursor: pointer;
@@ -169,25 +170,32 @@
         color: #ff8c00;
       }
       .container {
-        background-color: var(--purple);
+        background-color: var(--ash-gray);
         margin: auto;
         width: 80%;
       }
       header {
         background-color: white;
-        color: black;
+         background-color: var(--purple);
+        color: var(--ash-gray);
         padding: 1rem 12%;
         margin: auto;
       }
       h3 {
         text-transform: uppercase;
         color: var(--tangerine);
+         color: var(--purple);
+      }
+      /* using duplicate body to switch colors around */
+       body {
+        background-color: var(--tangerine);
+        color: #e0e0e0;
       }
     </style>
   </head>
   <body>
      <header>
-        <img src="img/logo-bw.png" class="img-fluid" alt="hello cookie logo">
+        <img src="img/logo-tangerine.png" class="img-fluid" alt="hello cookie logo">
         <span style="padding: 0 1rem">A dating website for computers to find other computers and fall in love.</span>
        </header>
 
