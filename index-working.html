@@ -326,7 +326,74 @@
           </select>
         </div>
       </div>
+// buttons
+      <div class="row">
+        <label for="VQ">Valued Qualities</label>
+</div>
 
+<div class="bubbles">
+  <button type="button" class="bubble" data-value="Reliable Internet
+">Reliable Internet
+
+</button>
+  <button type="button" class="bubble" data-value="Processing Speed
+">Processing Speed
+
+</button>
+  <button type="button" class="bubble" data-value="Portability">Portability</button>
+  <button type="button" class="bubble" data-value="Big Storage
+">Big Storage
+
+</button>
+  <button type="button" class="bubble" data-value="RGB Lighting
+">RGB Lighting
+
+</button>
+</div>
+
+<script>
+  const max = 3;
+  const bubbles = document.querySelectorAll('.bubble');
+
+  bubbles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selected = document.querySelectorAll('.bubble.selected');
+
+      // If already selected, deselect
+      if (btn.classList.contains('selected')) {
+        btn.classList.remove('selected');
+      } 
+      // Else, select if under max
+      else if (selected.length < max) {
+        btn.classList.add('selected');
+      }
+    });
+  });
+</script>
+
+<style>
+  .bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bubble {
+    border: 1px solid #888;
+    border-radius: 20px;
+    padding: 6px 14px;
+    cursor: pointer;
+    background: #2a2a3d;
+  }
+
+  .bubble.selected {
+    background: #ffffff;
+    color: white;
+    border-color: #ffffff;
+  }
+</style>
+
+// end of buttons
       <div class="row mt-2">
         <div class="col">
           <button onclick="generateProfile()">Generate Dating Profile</button>
