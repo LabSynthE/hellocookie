@@ -12,19 +12,26 @@
 
     <style>
       /* General Styles */
-      :root {
+      /* :root { */
         /* CSS HEX */
-        --purple: #9d44b5ff;
+        /* --purple: #9d44b5ff;
         --ash-gray: #a1b0abff;
         --raspberry: #b5446eff;
         --gray: #525252ff;
-        --tangerine: #f79d84ff;
+        --tangerine: #f79d84ff; */
+        /* --------- */
+      /* } */
+           :root {
+        /* CSS HEX */
+        --purple: #330066;
+        --gray: #333333;
+        --turquoise: #00cccc;
         /* --------- */
       }
       body {
         font-family: Arial, sans-serif;
         background-color: var(--tangerine);
-        background-color: var(--ash-gray);
+        background-color: var(--purple);
         color: #e0e0e0;
         margin: auto;
       }
@@ -171,26 +178,26 @@
       }
       .container {
         background-color: var(--ash-gray);
-        background-color: var(--purple);
+        background-color: var(--gray);
         margin: auto;
         width: 80%;
+        border-radius: 2rem 2rem 0 0; 
       }
       header {
         background-color: white;
          background-color: var(--purple);
-        color: var(--ash-gray);
-        color: black;
+        color: white;
         padding: 1rem 12%;
         margin: auto;
       }
       h3 {
         text-transform: uppercase;
         color: var(--tangerine);
-         color: var(--purple);
+         color: var(--turquoise);
       }
       /* using duplicate body to switch colors around */
        body {
-        background-color: var(--tangerine);
+        background-color: var(--purple);
         color: #e0e0e0;
       }
     </style>
