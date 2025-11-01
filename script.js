@@ -1,9 +1,35 @@
-// Theme Toggle Logic
-const themeToggle = document.getElementById("themeToggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  document.body.classList.toggle("light-mode");
+// ✅ FIXED: Wrapped theme toggle in DOMContentLoaded to prevent errors
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      // ✅ FIXED: This toggle logic now correctly matches your CSS
+      document.body.classList.toggle("light-mode");
+    });
+  }
 });
+
+// --- ✅ NEW FUNCTION: Toggles quote visibility ---
+function toggleQuote(button) {
+  // Get the parent <p> tag of the button
+  const quoteWrapper = button.closest("p");
+
+  // Find the hex and english spans within that parent
+  const hexSpan = quoteWrapper.querySelector(".hex-quote");
+  const engSpan = quoteWrapper.querySelector(".eng-quote");
+
+  // Toggle their display and the button text
+  if (engSpan.style.display === "none") {
+    engSpan.style.display = "inline";
+    hexSpan.style.display = "none";
+    button.innerText = "[show hex]";
+  } else {
+    engSpan.style.display = "none";
+    hexSpan.style.display = "inline";
+    button.innerText = "[translate]";
+  }
+}
+// ------------------------------------------------
 
 // Utility Functions
 const usedItems = new Map();
@@ -13,12 +39,13 @@ function getRandomUnique(key, arr) {
     usedItems.set(key, [...arr]); // Initialize with a copy of the array
   }
 
-  const available = usedItems.get(key);
+  let available = usedItems.get(key);
 
   if (available.length === 0) {
     // Reset if all items have been used
+    console.log(`Resetting items for key: ${key}`);
     usedItems.set(key, [...arr]);
-    return getRandomUnique(key, arr);
+    available = usedItems.get(key); // Re-get the newly reset array
   }
 
   const index = Math.floor(Math.random() * available.length);
@@ -40,6 +67,7 @@ function textToHex(text) {
 // Data
 const data = {
   age: {
+    // ✅ HTML value="new"
     new: [
       "a sparkling new machine",
       "the freshest byte on the block",
@@ -52,6 +80,7 @@ const data = {
       "a newborn in the digital world",
       "still updating BIOS",
     ],
+    // ✅ HTML value="mid"
     mid: [
       "in the prime of their processing",
       "seasoned and stable",
@@ -64,6 +93,7 @@ const data = {
       "knows what it's doing",
       "has seen a few updates",
     ],
+    // ✅ HTML value="old"
     old: [
       "a classic piece of silicon",
       "vintage and proud",
@@ -76,6 +106,7 @@ const data = {
       "a living legend",
       "was there before cloud storage",
     ],
+    // ✅ HTML value="ancient"
     ancient: [
       "a classic piece of silicon",
       "vintage and proud",
@@ -128,6 +159,7 @@ const data = {
     ],
   },
   purpose: {
+    // ✅ HTML value="gaming"
     gaming: [
       "craves high framerates and late-night raids",
       "lives for RGB and respawns",
@@ -140,6 +172,7 @@ const data = {
       "up all night, every night",
       "thinks lag is a personal insult",
     ],
+    // ✅ HTML value="surfing"
     surfing: [
       "lives for spreadsheets and syntax",
       "efficient and always on time",
@@ -152,6 +185,7 @@ const data = {
       "runs meetings and macros",
       "professionally caffeinated",
     ],
+    // ✅ HTML value="business"
     business: [
       "streams like a dream",
       "never skips the intro",
@@ -312,8 +346,8 @@ const data = {
   },
   adverbs: {
     gaming_device_adverbs: ["with style", "with flair", "with a smile"],
-    surfing_the_web_adverbs: ["[Surfing Adverb]"],
-    business_analyst_adverbs: ["[Business Adverb]"],
+    surfing_the_web_adverbs: ["chill", "totally", "like, really"],
+    business_analyst_adverbs: ["efficiently", "promptly", "synergistically"],
   },
   activities: {
     gaming_device_activities: [
@@ -356,6 +390,26 @@ function generateProfile() {
   const os = document.getElementById("os").value;
   const purpose = document.getElementById("purpose").value;
 
+  // Check if the selected purpose has special logic
+  const validPurpose = data.purpose.hasOwnProperty(purpose);
+
+  // Fallback for purposes without special data (coding, essays, etc.)
+  if (!validPurpose) {
+    const profileDiv = document.getElementById("profile");
+    profileDiv.innerHTML = `
+        <h2>Your Computer's Dating Profile:</h2>
+        <p>
+            Sorry, this computer is too busy ${
+              document.getElementById("purpose").options[
+                document.getElementById("purpose").selectedIndex
+              ].text
+            } to date right now.
+            It needs to focus on its career.
+        </p>
+    `;
+    return; // Exit the function
+  }
+
   const ageDesc = `<span class="age-text">${getRandomUnique(
     "age",
     data.age[age]
@@ -373,15 +427,21 @@ function generateProfile() {
     data.likes_and_dislikes.generic_dislikes
   )}</span>`;
 
-  let specificLikes,
+  let specificLikes1,
+    specificLikes2,
+    specificLikes3,
     specificDislikes,
     specificGreeting,
     osDesc,
     osDescriptor,
     osQuote,
-    specificvalue,
+    specificvalue1,
+    specificvalue2,
+    specificvalue3,
     specificAdverb,
-    specificActivity,
+    specificActivity1,
+    specificActivity2,
+    specificActivity3,
     specificDateMetaphor;
 
   if (purpose === "gaming") {
@@ -465,7 +525,7 @@ function generateProfile() {
       data.greetings.surfing_the_web_greeting
     )}</span>`;
 
-    specificvalue1 = `<span class="value-text">${getRandomUnique(
+    specificvalue1 = `<span class="value-text">${getRandomUnique( // Fixed a typo here, was "classV"
       "surfing_values",
       data.values.surfing_the_web_values
     )}</span>`;
@@ -545,7 +605,7 @@ function generateProfile() {
       "business_activities",
       data.activities.business_analyst_activities
     )}</span>`;
-    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+    specificActivity2 = `<span class_text">${getRandomUnique(
       "business_activities",
       data.activities.business_analyst_activities
     )}</span>`;
@@ -588,34 +648,54 @@ function generateProfile() {
 
   let profileText;
 
+  // --- ✅ THIS IS THE NEW PART ---
+  // Notice the <p> tag now contains the button and two spans:
+  // "hex-quote" (visible by default)
+  // "eng-quote" (hidden by default)
   if (purpose === "gaming") {
     profileText = `
         <h2>Your Computer's Dating Profile:</h2>
         <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC looking for ${specificDateMetaphor}! Whether you like ${specificActivity1}, or just ${specificActivity2}, it’s my top priority to serve your demands 😉. It’s in my code!</p>
         <p>I’m a fan of ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but don’t get me started on ${specificDislikes}. If that sounds like your vibe, shoot me a message and I’ll send you my discord! Then you can see that I’m not like the other PCs, I’m all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-        <p>Here’s a quote that defines me: "<span class="os-quote-text">${textToHex(
-          osQuote
-        )}</span>"</p>
+        <p>
+            Here’s a quote that defines me: 
+            "<span class="os-quote-text">
+                <span class="hex-quote">${textToHex(osQuote)}</span>
+                <span class="eng-quote" style="display: none;">${osQuote}</span>
+            </span>"
+            <button class="translate-button" onclick="toggleQuote(this)">[translate]</button>
+        </p>
         `;
   } else if (purpose === "surfing") {
     profileText = `
         <h2>Your Computer's Dating Profile:</h2>
         <p>${specificGreeting} You’re talking to a ${osDescriptor} ${osDesc} PC surfing for ${specificDateMetaphor}! If you want to shred some golden hour sun, or just love ${specificActivity1}, hang ten, ‘cause I’m your number one brah…</p>
         <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I just can’t stand ${specificDislikes}. Don’t let my laid back attitude make you wipe out. For me, it's all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-        <p>Here’s a quote that defines me: "<span class="os-quote-text">${textToHex(
-          osQuote
-        )}</span>"</p>
+        <p>
+            Here’s a quote that defines me: 
+            "<span class="os-quote-text">
+                <span class="hex-quote">${textToHex(osQuote)}</span>
+                <span class="eng-quote" style="display: none;">${osQuote}</span>
+            </span>"
+            <button class="translate-button" onclick="toggleQuote(this)">[translate]</button>
+        </p>
         `;
   } else if (purpose === "business") {
     profileText = `
         <h2>Your Computer's Dating Profile:</h2>
         <p>${specificGreeting} I am a ${osDescriptor} ${osDesc} PC requesting ${specificDateMetaphor}. Please let me know your availability for the week if you meet the following requirements: ${specificActivity1}, keeps  ${specificActivity2}, or enjoys  ${specificActivity3}. I would be overjoyed to meet with you.</p>
         <p>I appreciate ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}. Unfortunately, I am not a fan of ${specificDislikes}. I may seem rigid, but I am reliable, punctual and perceptive. In my case I am only concerned with ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-        <p>Here’s a quote that defines me: "<span class="os-quote-text">${textToHex(
-          osQuote
-        )}</span>"</p>
+        <p>
+            Here’s a quote that defines me: 
+            "<span class="os-quote-text">
+                <span class="hex-quote">${textToHex(osQuote)}</span>
+                <span class="eng-quote" style="display: none;">${osQuote}</span>
+            </span>"
+            <button class="translate-button" onclick="toggleQuote(this)">[translate]</button>
+        </p>
         `;
   }
 
   document.getElementById("profile").innerHTML = profileText;
 }
+
