@@ -386,6 +386,19 @@ const data = {
 
 // Generate Profile
 function generateProfile() {
+  const profileDiv = document.getElementById("profile");
+  const model = document.getElementById("model").value;
+  const imageMap = {
+    laptop: "img/laptop.png",
+    desktop: "img/gamingpc.png",
+    "all-in-one": "img/allinone.png",
+    phone: "img/phone.png",
+    tablet: "img/tablet.png",
+    frankenstein: "img/frankenstein.png",
+    supercomputer: "img/supercomputer.png",
+    
+  };
+  const imageUrl = imageMap[model] || imageMap["default"];
   const age = document.getElementById("age").value;
   const os = document.getElementById("os").value;
   const purpose = document.getElementById("purpose").value;
@@ -394,18 +407,22 @@ function generateProfile() {
   const validPurpose = data.purpose.hasOwnProperty(purpose);
 
   // Fallback for purposes without special data (coding, essays, etc.)
-  if (!validPurpose) {
-    const profileDiv = document.getElementById("profile");
+if (!validPurpose) {
+    const purposeText =
+      document.getElementById("purpose").options[
+        document.getElementById("purpose").selectedIndex
+      ].text;
+
+  
     profileDiv.innerHTML = `
-        <h2>Your Computer's Dating Profile:</h2>
-        <p>
-            Sorry, this computer is too busy ${
-              document.getElementById("purpose").options[
-                document.getElementById("purpose").selectedIndex
-              ].text
-            } to date right now.
-            It needs to focus on its career.
-        </p>
+        <img src="${imageUrl}" alt="${model} icon" class="profile-icon">
+        <div class="profile-text-content">
+            <h2>Your Computer's Dating Profile:</h2>
+            <p>
+                Sorry, this <strong>${model}</strong> is too busy ${purposeText.toLowerCase()} to date right now.
+                It needs to focus on its career.
+            </p>
+        </div>
     `;
     return; // Exit the function
   }
@@ -605,7 +622,7 @@ function generateProfile() {
       "business_activities",
       data.activities.business_analyst_activities
     )}</span>`;
-    specificActivity2 = `<span class_text">${getRandomUnique(
+    specificActivity2 = `<span activity-text">${getRandomUnique(
       "business_activities",
       data.activities.business_analyst_activities
     )}</span>`;
@@ -647,11 +664,6 @@ function generateProfile() {
   }
 
   let profileText;
-
-  // --- ✅ THIS IS THE NEW PART ---
-  // Notice the <p> tag now contains the button and two spans:
-  // "hex-quote" (visible by default)
-  // "eng-quote" (hidden by default)
   if (purpose === "gaming") {
     profileText = `
         <h2>Your Computer's Dating Profile:</h2>
@@ -696,6 +708,13 @@ function generateProfile() {
         `;
   }
 
-  document.getElementById("profile").innerHTML = profileText;
+profileDiv.innerHTML = `
+    <div class="profile-text-content">
+      ${profileText}
+    </div>
+    <div class="profile-image-container">
+        <img src="${imageUrl}" alt="${model} icon">
+    </div>
+  `;
 }
 
