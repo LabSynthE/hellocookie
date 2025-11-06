@@ -385,317 +385,353 @@ const data = {
 };
 
 // Generate Profile
+// Generate Profile
 function generateProfile() {
-  const age = document.getElementById("age").value;
-  const os = document.getElementById("os").value;
-  const purpose = document.getElementById("purpose").value;
+  const profileDiv = document.getElementById("profile");
+  const model = document.getElementById("model").value;
+  const imageMap = {
+    laptop: "img/laptop.png",
+    desktop: "img/gamingpc.png",
+    "all-in-one": "img/allinone.png",
+    phone: "img/phone.png",
+    tablet: "img/tablet.png",
+    frankenstein: "img/frankenstein.png",
+    supercomputer: "img/supercomputer.png",
+    
+  };
+  const imageUrl = imageMap[model] || imageMap["default"];
+  const age = document.getElementById("age").value;
+  const os = document.getElementById("os").value;
+  const purpose = document.getElementById("purpose").value;
 
-  // Check if the selected purpose has special logic
-  const validPurpose = data.purpose.hasOwnProperty(purpose);
 
-  // Fallback for purposes without special data (coding, essays, etc.)
-  if (!validPurpose) {
-    const profileDiv = document.getElementById("profile");
-    profileDiv.innerHTML = `
-        <h2>Your Computer's Dating Profile:</h2>
-        <p>
-            Sorry, this computer is too busy ${
-              document.getElementById("purpose").options[
-                document.getElementById("purpose").selectedIndex
-              ].text
-            } to date right now.
-            It needs to focus on its career.
-        </p>
-    `;
-    return; // Exit the function
-  }
+  // 1. Get the value from the input
+const batteryLife = document.getElementById("screentime").value;
+let batteryPercent = parseInt(batteryLife);
 
-  const ageDesc = `<span class="age-text">${getRandomUnique(
-    "age",
-    data.age[age]
-  )}</span>`;
-  const purposeDesc = `<span class="purpose-text">${getRandomUnique(
-    "purpose",
-    data.purpose[purpose]
-  )}</span>`;
-  const genericLike = `<span class="like-text">${getRandomUnique(
-    "generic_likes",
-    data.likes_and_dislikes.generic_likes
-  )}</span>`;
-  const genericDislike = `<span class="dislike-text">${getRandomUnique(
-    "generic_dislikes",
-    data.likes_and_dislikes.generic_dislikes
-  )}</span>`;
-
-  let specificLikes1,
-    specificLikes2,
-    specificLikes3,
-    specificDislikes,
-    specificGreeting,
-    osDesc,
-    osDescriptor,
-    osQuote,
-    specificvalue1,
-    specificvalue2,
-    specificvalue3,
-    specificAdverb,
-    specificActivity1,
-    specificActivity2,
-    specificActivity3,
-    specificDateMetaphor;
-
-  if (purpose === "gaming") {
-    specificLikes1 = `<span class="like-text">${getRandomUnique(
-      "gaming_likes",
-      data.likes_and_dislikes.gaming_device_likes
-    )}</span>`;
-    specificLikes2 = `<span class="like-text">${getRandomUnique(
-      "gaming_likes",
-      data.likes_and_dislikes.gaming_device_likes
-    )}</span>`;
-    specificLikes3 = `<span class="like-text">${getRandomUnique(
-      "gaming_likes",
-      data.likes_and_dislikes.gaming_device_likes
-    )}</span>`;
-
-    specificDislikes = `<span class="dislike-text">${getRandomUnique(
-      "gaming_dislikes",
-      data.likes_and_dislikes.gaming_device_dislikes
-    )}</span>`;
-    specificGreeting = `<span class="greeting-text">${getRandomUnique(
-      "gaming_greetings",
-      data.greetings.gaming_device_greeting
-    )}</span>`;
-
-    specificvalue1 = `<span class="value-text">${getRandomUnique(
-      "gaming_values",
-      data.values.gaming_device_values
-    )}</span>`;
-    specificvalue2 = `<span class="value-text">${getRandomUnique(
-      "gaming_values",
-      data.values.gaming_device_values
-    )}</span>`;
-    specificvalue3 = `<span class="value-text">${getRandomUnique(
-      "gaming_values",
-      data.values.gaming_device_values
-    )}</span>`;
-
-    specificAdverb = `<span class="adverb-text">${getRandomUnique(
-      "gaming_adverbs",
-      data.adverbs.gaming_device_adverbs
-    )}</span>`;
-
-    specificActivity1 = `<span class="activity-text">${getRandomUnique(
-      "gaming_activities",
-      data.activities.gaming_device_activities
-    )}</span>`;
-    specificActivity2 = `<span class="activity-text">${getRandomUnique(
-      "gaming_activities",
-      data.activities.gaming_device_activities
-    )}</span>`;
-    specificActivity3 = `<span class="activity-text">${getRandomUnique(
-      "gaming_activities",
-      data.activities.gaming_device_activities
-    )}</span>`;
-
-    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
-      "gaming_date_metaphors",
-      data.date_metaphors.gaming_device_date_metaphors
-    )}</span>`;
-  } else if (purpose === "surfing") {
-    specificLikes1 = `<span class="like-text">${getRandomUnique(
-      "surfing_likes",
-      data.likes_and_dislikes.surfing_the_web_likes
-    )}</span>`;
-    specificLikes2 = `<span class="like-text">${getRandomUnique(
-      "surfing_likes",
-      data.likes_and_dislikes.surfing_the_web_likes
-    )}</span>`;
-    specificLikes3 = `<span class="like-text">${getRandomUnique(
-      "surfing_likes",
-      data.likes_and_dislikes.surfing_the_web_likes
-    )}</span>`;
-
-    specificDislikes = `<span class="dislike-text">${getRandomUnique(
-      "surfing_dislikes",
-      data.likes_and_dislikes.surfing_the_web_dislikes
-    )}</span>`;
-    specificGreeting = `<span class="greeting-text">${getRandomUnique(
-      "surfing_greetings",
-      data.greetings.surfing_the_web_greeting
-    )}</span>`;
-
-    specificvalue1 = `<span class="value-text">${getRandomUnique( // Fixed a typo here, was "classV"
-      "surfing_values",
-      data.values.surfing_the_web_values
-    )}</span>`;
-    specificvalue2 = `<span class="value-text">${getRandomUnique(
-      "surfing_values",
-      data.values.surfing_the_web_values
-    )}</span>`;
-    specificvalue3 = `<span class="value-text">${getRandomUnique(
-      "surfing_values",
-      data.values.surfing_the_web_values
-    )}</span>`;
-
-    specificAdverb = `<span class="adverb-text">${getRandomUnique(
-      "surfing_adverbs",
-      data.adverbs.surfing_the_web_adverbs
-    )}</span>`;
-
-    specificActivity1 = `<span class="activity-text">${getRandomUnique(
-      "surfing_activities",
-      data.activities.surfing_the_web_activities
-    )}</span>`;
-    specificActivity2 = `<span class="activity-text">${getRandomUnique(
-      "surfing_activities",
-      data.activities.surfing_the_web_activities
-    )}</span>`;
-    specificActivity3 = `<span class="activity-text">${getRandomUnique(
-      "surfing_activities",
-      data.activities.surfing_the_web_activities
-    )}</span>`;
-
-    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
-      "surfing_date_metaphors",
-      data.date_metaphors.surfing_the_web_date_metaphors
-    )}</span>`;
-  } else if (purpose === "business") {
-    specificLikes1 = `<span class="like-text">${getRandomUnique(
-      "business_likes",
-      data.likes_and_dislikes.business_analyst_likes
-    )}</span>`;
-    specificLikes2 = `<span class="like-text">${getRandomUnique(
-      "business_likes",
-      data.likes_and_dislikes.business_analyst_likes
-    )}</span>`;
-    specificLikes3 = `<span class="like-text">${getRandomUnique(
-      "business_likes",
-      data.likes_and_dislikes.business_analyst_likes
-    )}</span>`;
-
-    specificDislikes = `<span class="dislike-text">${getRandomUnique(
-      "business_dislikes",
-      data.likes_and_dislikes.business_analyst_dislikes
-    )}</span>`;
-    specificGreeting = `<span class="greeting-text">${getRandomUnique(
-      "business_greetings",
-      data.greetings.business_analyst_greeting
-    )}</span>`;
-
-    specificvalue1 = `<span class="value-text">${getRandomUnique(
-      "business_values",
-      data.values.business_analyst_values
-    )}</span>`;
-    specificvalue2 = `<span class="value-text">${getRandomUnique(
-      "business_values",
-      data.values.business_analyst_values
-    )}</span>`;
-    specificvalue3 = `<span class="value-text">${getRandomUnique(
-      "business_values",
-      data.values.business_analyst_values
-    )}</span>`;
-
-    specificAdverb = `<span class="adverb-text">${getRandomUnique(
-      "business_adverbs",
-      data.adverbs.business_analyst_adverbs
-    )}</span>`;
-
-    specificActivity1 = `<span class="activity-text">${getRandomUnique(
-      "business_activities",
-      data.activities.business_analyst_activities
-    )}</span>`;
-    specificActivity2 = `<span class_text">${getRandomUnique(
-      "business_activities",
-      data.activities.business_analyst_activities
-    )}</span>`;
-    specificActivity3 = `<span class="activity-text">${getRandomUnique(
-      "business_activities",
-      data.activities.business_analyst_activities
-    )}</span>`;
-
-    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
-      "business_date_metaphors",
-      data.date_metaphors.business_analyst_date_metaphors
-    )}</span>`;
-  }
-
-  if (os === "mac") {
-    osDescriptor = `<span class="os-descriptor-text">${getRandomUnique(
-      "mac_descriptors",
-      data.os_descriptors.mac_descriptors
-    )}</span>`;
-    osQuote = `${getRandomUnique("mac_quotes", data.quotes.mac_quotes)}`;
-    osDesc = `<span class="os-text"> macOS </span>`;
-  } else if (os === "windows") {
-    osDescriptor = `<span class="os-descriptor-text">${getRandomUnique(
-      "windows_descriptors",
-      data.os_descriptors.windows_descriptors
-    )}</span>`;
-    osQuote = `${getRandomUnique(
-      "windows_quotes",
-      data.quotes.windows_quotes
-    )}`;
-    osDesc = `<span class="os-text"> Windows </span>`;
-  } else if (os === "linux") {
-    osDescriptor = `<span class="os-descriptor-text">${getRandomUnique(
-      "linux_descriptors",
-      data.os_descriptors.linux_descriptors
-    )}</span>`;
-    osQuote = `${getRandomUnique("linux_quotes", data.quotes.linux_quotes)}`;
-    osDesc = `<span class="os-text"> Linux </span>`;
-  }
-
-  let profileText;
-
-  // --- ✅ THIS IS THE NEW PART ---
-  // Notice the <p> tag now contains the button and two spans:
-  // "hex-quote" (visible by default)
-  // "eng-quote" (hidden by default)
-  if (purpose === "gaming") {
-    profileText = `
-        <h2>Your Computer's Dating Profile:</h2>
-        <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC looking for ${specificDateMetaphor}! Whether you like ${specificActivity1}, or just ${specificActivity2}, it’s my top priority to serve your demands 😉. It’s in my code!</p>
-        <p>I’m a fan of ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but don’t get me started on ${specificDislikes}. If that sounds like your vibe, shoot me a message and I’ll send you my discord! Then you can see that I’m not like the other PCs, I’m all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-        <p>
-            Here’s a quote that defines me: 
-            "<span class="os-quote-text">
-                <span class="hex-quote">${textToHex(osQuote)}</span>
-                <span class="eng-quote" style="display: none;">${osQuote}</span>
-            </span>"
-            <button class="translate-button" onclick="toggleQuote(this)">[translate]</button>
-        </p>
-        `;
-  } else if (purpose === "surfing") {
-    profileText = `
-        <h2>Your Computer's Dating Profile:</h2>
-        <p>${specificGreeting} You’re talking to a ${osDescriptor} ${osDesc} PC surfing for ${specificDateMetaphor}! If you want to shred some golden hour sun, or just love ${specificActivity1}, hang ten, ‘cause I’m your number one brah…</p>
-        <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I just can’t stand ${specificDislikes}. Don’t let my laid back attitude make you wipe out. For me, it's all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-        <p>
-            Here’s a quote that defines me: 
-            "<span class="os-quote-text">
-                <span class="hex-quote">${textToHex(osQuote)}</span>
-                <span class="eng-quote" style="display: none;">${osQuote}</span>
-            </span>"
-            <button class="translate-button" onclick="toggleQuote(this)">[translate]</button>
-        </p>
-        `;
-  } else if (purpose === "business") {
-    profileText = `
-        <h2>Your Computer's Dating Profile:</h2>
-        <p>${specificGreeting} I am a ${osDescriptor} ${osDesc} PC requesting ${specificDateMetaphor}. Please let me know your availability for the week if you meet the following requirements: ${specificActivity1}, keeps  ${specificActivity2}, or enjoys  ${specificActivity3}. I would be overjoyed to meet with you.</p>
-        <p>I appreciate ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}. Unfortunately, I am not a fan of ${specificDislikes}. I may seem rigid, but I am reliable, punctual and perceptive. In my case I am only concerned with ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-        <p>
-            Here’s a quote that defines me: 
-            "<span class="os-quote-text">
-                <span class="hex-quote">${textToHex(osQuote)}</span>
-                <span class="eng-quote" style="display: none;">${osQuote}</span>
-            </span>"
-            <button class="translate-button" onclick="toggleQuote(this)">[translate]</button>
-        </p>
-        `;
-  }
-
-  document.getElementById("profile").innerHTML = profileText;
+// 2. Sanitize the input
+if (isNaN(batteryPercent) || batteryPercent < 0) {
+  batteryPercent = 0; // Default to 0 if empty or invalid
+}
+if (batteryPercent > 100) {
+  batteryPercent = 100; // Cap at 100%
 }
 
+// 3. Determine the color class based on percentage
+let batteryColorClass = 'high'; // Default to green
+if (batteryPercent <= 20) {
+  batteryColorClass = 'low'; // Red
+} else if (batteryPercent <= 50) {
+  batteryColorClass = 'medium'; // Yellow
+}
+
+// 4. Build the battery HTML string
+const batteryHTML = `
+  <div class="battery-container">
+    <div class="battery-icon">
+      <div class="battery-fill ${batteryColorClass}" style="width: ${batteryPercent}%;"></div>
+    </div>
+    <span class="battery-text">${batteryPercent}%</span>
+  </div>
+`;
+  // Check if the selected purpose has special logic
+  const validPurpose = data.purpose.hasOwnProperty(purpose);
+
+  // Fallback for purposes without special data (coding, essays, etc.)
+if (!validPurpose) {
+    const purposeText =
+      document.getElementById("purpose").options[
+        document.getElementById("purpose").selectedIndex
+      ].text;
+
+profileDiv.innerHTML = `
+        <div class="profile-image-container">
+            <img src="${imageUrl}" alt="${model} icon">
+            ${batteryHTML} 
+        </div>
+        <div class="profile-text-content">
+            <h2>Your Computer's Dating Profile:</h2>
+            <p>
+                Sorry, this <strong>${model}</strong> is too busy ${purposeText.toLowerCase()} to date right now.
+                It needs to focus on its career.
+          . </p>
+        </div>
+    `;
+    return; // Exit the function
+  }
+
+
+  const ageDesc = `<span class="age-text">${getRandomUnique(
+    "age",
+    data.age[age]
+  )}</span>`;
+  const purposeDesc = `<span class="purpose-text">${getRandomUnique(
+    "purpose",
+    data.purpose[purpose]
+  )}</span>`;
+  const genericLike = `<span class="like-text">${getRandomUnique(
+    "generic_likes",
+    data.likes_and_dislikes.generic_likes
+  )}</span>`;
+  const genericDislike = `<span class="dislike-text">${getRandomUnique(
+    "generic_dislikes",
+    data.likes_and_dislikes.generic_dislikes
+  )}</span>`;
+
+  let specificLikes1,
+    specificLikes2,
+    specificLikes3,
+    specificDislikes,
+    specificGreeting,
+    osDesc,
+    osDescriptor,
+    osQuote,
+    specificvalue1,
+    specificvalue2,
+    specificvalue3,
+    specificAdverb,
+    specificActivity1,
+    specificActivity2,
+    specificActivity3,
+    specificDateMetaphor;
+
+  if (purpose === "gaming") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "gaming_likes",
+      data.likes_and_dislikes.gaming_device_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "gaming_likes",
+      data.likes_and_dislikes.gaming_device_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "gaming_likes",
+      data.likes_and_dislikes.gaming_device_likes
+    )}</span>`;
+
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "gaming_dislikes",
+      data.likes_and_dislikes.gaming_device_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "gaming_greetings",
+      data.greetings.gaming_device_greeting
+    )}</span>`;
+
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "gaming_values",
+      data.values.gaming_device_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "gaming_values",
+      data.values.gaming_device_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "gaming_values",
+      data.values.gaming_device_values
+    )}</span>`;
+
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "gaming_adverbs",
+      data.adverbs.gaming_device_adverbs
+    )}</span>`;
+
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "gaming_activities",
+      data.activities.gaming_device_activities
+    )}</span>`;
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "gaming_activities",
+      data.activities.gaming_device_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "gaming_activities",
+      data.activities.gaming_device_activities
+    )}</span>`;
+
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "gaming_date_metaphors",
+      data.date_metaphors.gaming_device_date_metaphors
+    )}</span>`;
+  } else if (purpose === "surfing") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "surfing_likes",
+      data.likes_and_dislikes.surfing_the_web_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "surfing_likes",
+      data.likes_and_dislikes.surfing_the_web_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "surfing_likes",
+      data.likes_and_dislikes.surfing_the_web_likes
+    )}</span>`;
+
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "surfing_dislikes",
+      data.likes_and_dislikes.surfing_the_web_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "surfing_greetings",
+      data.greetings.surfing_the_web_greeting
+    )}</span>`;
+
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "surfing_values",
+      data.values.surfing_the_web_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "surfing_values",
+      data.values.surfing_the_web_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "surfing_values",
+      data.values.surfing_the_web_values
+    )}</span>`;
+
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "surfing_adverbs",
+      data.adverbs.surfing_the_web_adverbs
+    )}</span>`;
+
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "surfing_activities",
+      data.activities.surfing_the_web_activities
+    )}</span>`;
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "surfing_activities",
+      data.activities.surfing_the_web_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "surfing_activities",
+      data.activities.surfing_the_web_activities
+    )}</span>`;
+
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "surfing_date_metaphors",
+      data.date_metaphors.surfing_the_web_date_metaphors
+    )}</span>`;
+  } else if (purpose === "business") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "business_likes",
+      data.likes_and_dislikes.business_analyst_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "business_likes",
+      data.likes_and_dislikes.business_analyst_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "business_likes",
+      data.likes_and_dislikes.business_analyst_likes
+    )}</span>`;
+
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "business_dislikes",
+      data.likes_and_dislikes.business_analyst_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "business_greetings",
+      data.greetings.business_analyst_greeting
+    )}</span>`;
+
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "business_values",
+      data.values.business_analyst_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "business_values",
+      data.values.business_analyst_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "business_values",
+      data.values.business_analyst_values
+    )}</span>`;
+
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "business_adverbs",
+      data.adverbs.business_analyst_adverbs
+    )}</span>`;
+
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "business_activities",
+      data.activities.business_analyst_activities
+    )}</span>`;
+    // ✅ FIXED TYPO HERE
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "business_activities",
+      data.activities.business_analyst_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "business_activities",
+      data.activities.business_analyst_activities
+    )}</span>`;
+
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "business_date_metaphors",
+      data.date_metaphors.business_analyst_date_metaphors
+    )}</span>`;
+  }
+
+  if (os === "mac") {
+    osDescriptor = `<span class="os-descriptor-text">${getRandomUnique(
+      "mac_descriptors",
+      data.os_descriptors.mac_descriptors
+    )}</span>`;
+    osQuote = `${getRandomUnique("mac_quotes", data.quotes.mac_quotes)}`;
+    osDesc = `<span class="os-text"> macOS </span>`;
+  } else if (os === "windows") {
+    osDescriptor = `<span class="os-descriptor-text">${getRandomUnique(
+      "windows_descriptors",
+      data.os_descriptors.windows_descriptors
+    )}</span>`;
+    osQuote = `${getRandomUnique(
+      "windows_quotes",
+      data.quotes.windows_quotes
+    )}`;
+    osDesc = `<span class="os-text"> Windows </span>`;
+  } else if (os === "linux") {
+    osDescriptor = `<span class="os-descriptor-text">${getRandomUnique(
+      "linux_descriptors",
+      data.os_descriptors.linux_descriptors
+    )}</span>`;
+    osQuote = `${getRandomUnique("linux_quotes", data.quotes.linux_quotes)}`;
+    osDesc = `<span class="os-text"> Linux </span>`;
+  }
+
+  // ... (Your profileText templates are all correct and unchanged) ...
+  let profileText;
+  if (purpose === "gaming") {
+    profileText = `
+        <h2>Your Computer's Dating Profile:</h2>
+        <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC looking for ${specificDateMetaphor}! Whether you like ${specificActivity1}, or just ${specificActivity2}, it’s my top priority to serve your demands 😉. It’s in my code!</p>
+        <p>I’m a fan of ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but don’t get me started on ${specificDislikes}. If that sounds like your vibe, shoot me a message and I’ll send you my discord! Then you can see that I’m not like the other PCs, I’m all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
+
+        <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+        `;
+  } else if (purpose === "surfing") {
+    profileText = `
+        <h2>Your Computer's Dating Profile:</h2>
+        <p>${specificGreeting} You’re talking to a ${osDescriptor} ${osDesc} PC surfing for ${specificDateMetaphor}! If you want to shred some golden hour sun, or just love ${specificActivity1}, hang ten, ‘cause I’m your number one brah…</p>
+        <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I just can’t stand ${specificDislikes}. Don’t let my laid back attitude make you wipe out. For me, it's all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
+       <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>    
+        `;
+  } else if (purpose === "business") {
+    profileText = `
+        <h2>Your Computer's Dating Profile:</h2>
+        <p>${specificGreeting} I am a ${osDescriptor} ${osDesc} PC requesting ${specificDateMetaphor}. Please let me know your availability for the week if you meet the following requirements: ${specificActivity1}, keeps  ${specificActivity2}, or enjoys  ${specificActivity3}. I would be overjoyed to meet with you.</p>
+        <p>I appreciate ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}. Unfortunately, I am not a fan of ${specificDislikes}. I may seem rigid, but I am reliable, punctual and perceptive. In my case I am only concerned with ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
+  
+        <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+        `;
+  }
+
+profileDiv.innerHTML = `
+    <div class="profile-image-container">
+        <img src="${imageUrl}" alt="${model} icon">
+        ${batteryHTML} 
+    </div>
+    <div class="profile-text-content">
+      ${profileText}
+    </div>
+  `;
+}
