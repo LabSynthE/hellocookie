@@ -159,7 +159,7 @@ const data = {
     ],
   },
   purpose: {
-    // ✅ HTML value="gaming"
+    // HTML value="gaming"
     gaming: [
       "craves high framerates and late-night raids",
       "lives for RGB and respawns",
@@ -171,22 +171,9 @@ const data = {
       "comes with a side of rage quits",
       "up all night, every night",
       "thinks lag is a personal insult",
-    ],
-    // ✅ HTML value="surfing"
+      ],
+    // HTML value="surfing"
     surfing: [
-      "lives for spreadsheets and syntax",
-      "efficient and always on time",
-      "loves a clean desktop",
-      "has their resume saved in triplicate",
-      "gets along with printers (usually)",
-      "all about deadlines and dialogue boxes",
-      "grinds from 9 to 5 and beyond",
-      "knows every shortcut in Excel",
-      "runs meetings and macros",
-      "professionally caffeinated",
-    ],
-    // ✅ HTML value="business"
-    business: [
       "streams like a dream",
       "never skips the intro",
       "lives for playlists and pixels",
@@ -197,8 +184,93 @@ const data = {
       "knows your algorithm better than you",
       "can quote every line from your favorite show",
       "addicted to autoplay",
-    ],
-  },
+      ],
+    // HTML value="business"
+    business: [
+      "lives for spreadsheets and syntax",
+      "efficient and always on time",
+      "loves a clean desktop",
+      "has their resume saved in triplicate",
+      "gets along with printers (usually)",
+      "all about deadlines and dialogue boxes",
+      "grinds from 9 to 5 and beyond",
+      "knows every shortcut in Excel",
+      "runs meetings and macros",
+      "professionally caffeinated",
+      ],
+      coding: [
+      "lives in the terminal",
+      "runs on caffeine and curiosity",
+      "never met a bug it couldn’t debug",
+      "dreams in syntax highlighting",
+      "uses semicolons responsibly",
+      "built to compile, not to compromise",
+      "finds comfort in clean code",
+      "believes comments are love letters to the future",
+      "keeps Stack Overflow bookmarked like scripture",
+      "fears only merge conflicts",
+      ],
+      spreadsheets: [
+      "keeps everything in order",
+      "calculates compatibility with conditional formatting",
+      "thinks in rows and columns",
+      "forms patterns from chaos",
+      "believes love should sum up to something positive",
+      "balances both books and hearts",
+      "knows a pivot table can fix almost anything",
+      "formats emotions with precision",
+      "never forgets to autosave",
+      "lives for a clean, color-coded chart",
+      ],
+      coding: [
+        "lives in the terminal",
+        "runs on caffeine and curiosity",
+        "never met a bug it couldn’t debug (eventually)",
+        "dreams in syntax highlighting",
+        "uses semicolons responsibly",
+        "built to compile, not to compromise",
+        "finds comfort in clean code",
+        "believes comments are love letters to the future",
+        "keeps Stack Overflow bookmarked like scripture",
+        "fears only merge conflicts",
+      ],
+      essays: [
+        "spins structure from chaos",
+        "has a thesis for every mood",
+        "edits like a surgeon, deletes like a poet",
+        "believes in the Oxford comma and emotional honesty",
+        "quotes sources and lovers responsibly",
+        "thinks in paragraphs and metaphors",
+        "lives for a perfectly timed conclusion",
+        "prints double-spaced feelings",
+        "wrestles citations at midnight",
+        "writes drafts of its own existence",
+      ],
+      doomscrolling: [
+        "scrolls through the void with style",
+        "absorbs chaos faster than Wi-Fi can handle",
+        "knows the algorithm too well",
+        "runs on anxiety and refresh buttons",
+        "doomscrolls but makes it aesthetic",
+        "reads the comments section like scripture",
+        "never blinks between tabs",
+        "has the world’s problems bookmarked",
+        "likes, shares, and despairs",
+        "checks notifications like heartbeats",
+      ],
+      procrastination: [
+        "plans to get things done eventually",
+        "makes a to-do list but forgets step one",
+        "masters the art of pretending to be busy",
+        "believes deadlines are merely suggestions",
+        "lives for one more YouTube break",
+        "has 47 tabs open and no regrets",
+        "says 'five more minutes' like a prayer",
+        "dreams of productivity but loves the nap more",
+        "knows time management... theoretically",
+        "finds meaning in doing everything but the task",
+      ],
+    },
   likes_and_dislikes: {
     generic_likes: [
       "sunsets",
@@ -268,6 +340,112 @@ const data = {
       "pay raises",
       "shareholder dissatisfaction",
     ],
+    coding_device_likes: [
+    "tight loops and elegant recursion",
+    "dark mode everything",
+    "optimizing algorithms",
+    "Git commits that actually make sense",
+    "modular design",
+    ],
+    coding_device_dislikes: [
+      "spaghetti code",
+      "silent errors",
+      "clients who say 'just make it work'",
+      "tabs vs spaces discourse",
+      "production-only bugs",
+    ],
+    spreadsheet_device_likes: [
+    "clean data and clear formatting",
+    "perfectly aligned cells",
+    "balanced formulas",
+    "color-coded categories",
+    "well-labeled graphs",
+    ],
+    spreadsheet_device_dislikes: [
+      "circular references",
+      "mismatched parentheses",
+      "broken formulas",
+      "unsorted chaos",
+      "forgotten autosaves",
+    ],
+
+    coding_device_likes: [
+      "tight loops and elegant recursion",
+      "structs",
+      "dark mode",
+      "optimization",
+      "Git commits that actually make sense",
+      "modular design",
+      "things that just work",
+    ],
+    coding_device_dislikes: [
+      "spaghetti code",
+      "silent errors",
+      "clients who say 'just make it work'",
+      "Java",
+      "tabs vs spaces discourse",
+      "production-only bugs",
+      "CPU bloat",
+      "",
+    ],
+
+    essay_device_likes: [
+      "warm coffee and clean drafts",
+      "well-structured arguments",
+      "smooth transitions between paragraphs",
+      "metaphors that just hit",
+      "a solid thesis",
+      "freewriting",
+      "citing sources",
+    ],
+    essay_device_dislikes: [
+      "run-on sentences",
+      "uncited sources",
+      "late-night grammar meltdowns",
+      "Microsoft Word autoformatting chaos",
+      "feedback that just says 'expand this'",
+      "citation errors",
+      "paragraphs written by AI",
+    ],
+
+    doomscrolling_device_likes: [
+      "fresh memes",
+      "cat videos",
+      "ironic humor",
+      "curated timelines",
+      "doom vibes",
+      "social media debates",
+      "hatewatching",
+      "shorftorm content",
+      "only knowing ~15 seconds of a song",
+    ],
+    doomscrolling_device_dislikes: [
+      "comment sections",
+      "infinite notifications",
+      "algorithmic rot",
+      "low battery life",
+      "AI slop content",
+      "reading sources",
+      "fresh air",
+      "delayed gratification",
+      "videos longer than 60 seconds",
+      "missing out",
+    ],
+    procrastination_device_likes: [
+      "meaningless tasks that feel productive",
+      "new hobbies every week",
+      "cleaning the desktop instead of working",
+      "the rush of last-minute panic",
+      "manifesting productivity",
+    ],
+    procrastination_device_dislikes: [
+      "responsibility",
+      "timers",
+      "to-do lists",
+      "people who actually finish things",
+      "motivation speeches",
+      "self-reflection at 3am",
+    ],
   },
   os_descriptors: {
     mac_descriptors: ["sleek", "user-friendly"],
@@ -313,12 +491,45 @@ const data = {
     ],
   },
   greetings: {
-    gaming_device_greeting: ["Konichiwa!", "Hey, you!", "What’s up?"],
-    surfing_the_web_greeting: ["Aloha.", "What’s good, dude?", "Hey, Grom!"],
+    gaming_device_greeting: [
+      "Konichiwa!", 
+      "Hey, you!", 
+      "What’s up?"
+    ],
+    surfing_the_web_greeting: [
+      "Aloha.", 
+      "What’s good, dude?", 
+      "Hey, Grom!"
+    ],
     business_analyst_greeting: [
       "Hello.",
       "Good Day,",
       "To Whom it May Concern:",
+    ],
+    coding_device_greeting: [
+    "Hello, world.",
+    "Ping received.",
+    "Greetings, fellow computer!",
+    ],
+    spreadsheet_device_greeting: [
+    "Greetings, valued user.",
+    "Welcome back. Your cells await.",
+    "Good day.",
+    ],
+    essay_device_greeting: [
+      "Hello, dear writer.",
+      "Ready to make some magic between the margins?",
+      "Let’s craft something coherent together.",
+    ],
+    doomscrolling_device_greeting: [
+      "Hey. You up?",
+      "...hi",
+      "@you",
+    ],
+    procrastination_device_greeting: [
+      "Sup. We’ll start… soon.",
+      "Hey, no rush.",
+      "Just vibing until motivation hits.",
     ],
   },
   values: {
@@ -343,11 +554,84 @@ const data = {
       "punctuality",
       "fair pricing",
     ],
+    coding_device_values: [
+      "clarity",
+      "efficiency",
+      "open-source",
+      "logic",
+      "concision",
+      "performance",
+    ],
+    spreadsheet_device_values: [
+      "precision",
+      "balance",
+      "organization",
+      "consistency",
+    ],
+    essay_device_values: [
+      "clarity",
+      "expression",
+      "revision",
+      "honesty",
+    ],
+    doomscrolling_device_values: [
+      "awareness",
+      "connection",
+      "dark humor",
+      "relatability",
+      "low pressure",
+      "committment",
+    ],
+    procrastination_device_values: [
+      "patience",
+      "imagination",
+      "comfort",
+      "denial",
+    ],
   },
   adverbs: {
-    gaming_device_adverbs: ["with style", "with flair", "with a smile"],
-    surfing_the_web_adverbs: ["chill", "totally", "like, really"],
-    business_analyst_adverbs: ["efficiently", "promptly", "synergistically"],
+    gaming_device_adverbs: [
+      "with style", 
+      "with flair", 
+      "with a smile"
+    ],
+    surfing_the_web_adverbs: [
+      "chill", 
+      "totally", 
+      "like, really"
+    ],
+    business_analyst_adverbs: [
+      "efficiently", 
+      "promptly",
+      "synergistically"
+    ],
+    coding_device_adverbs: [
+      "elegantly",
+      "precisely",
+      "modularly",
+      "efficiently",
+    ],
+    spreadsheet_device_adverbs: [
+      "systematically",
+      "precisely",
+      "efficiently",
+    ],
+    essay_device_adverbs: [
+      "thoughtfully",
+      "eloquently",
+      "meticulously",
+    ],
+    doomscrolling_device_adverbs: [
+      "endlessly",
+      "ironically",
+      "dismally",
+      "easily",
+    ],
+    procrastination_device_adverbs: [
+      "eventually",
+      "half-heartedly",
+      "lazily",
+    ],
   },
   activities: {
     gaming_device_activities: [
@@ -370,6 +654,36 @@ const data = {
       "making graphs",
       "sending emails",
     ],
+    coding_device_activities: [
+      "writing elegant functions",
+      "debugging at 2am",
+      "reading documentation for fun",
+      "pair-programming over coffee",
+    ],
+    spreadsheet_device_activities: [
+      "balancing budgets",
+      "color-coding expenses",
+      "tracking habits",
+      "organizing chaos into cells",
+    ],
+    essay_device_activities: [
+      "writing late into the night",
+      "overanalyzing every sentence",
+      "sipping coffee between thoughts",
+      "rewriting intros twelve times",
+    ],
+    doomscrolling_device_activities: [
+      "refreshing the feed",
+      "reading the comments despite better judgment",
+      "opening five tabs per headline",
+      "liking ironically",
+    ],
+    procrastination_device_activities: [
+      "reorganizing folders instead of starting work",
+      "binge-watching productivity videos",
+      "daydreaming about success",
+      "refreshing the same three apps",
+    ],
   },
   date_metaphors: {
     gaming_device_date_metaphors: [
@@ -381,10 +695,29 @@ const data = {
       "someone to go over CSV files",
       "someone to go over meeting notes with",
     ],
+    spreadsheet_device_date_metaphors: [
+    "someone to balance the books of life with",
+    "a partner who understands my formulas",
+    ],
+    essay_device_date_metaphors: [
+      "a co-author for my next chapter",
+      "someone to proofread my heart",
+    ],
+    doomscrolling_device_date_metaphors: [
+      "someone to share the void with",
+      "a partner who double-taps my despair",
+    ],
+    procrastination_device_date_metaphors: [
+      "someone to put things off with forever",
+      "a soulmate who also says 'five more minutes'",
+    ],
+    coding_device_date_metaphors: [
+      "someone to merge branches with",
+      "a partner to refactor life together",
+    ],
   },
 };
 
-// Generate Profile
 // Generate Profile
 function generateProfile() {
   const profileDiv = document.getElementById("profile");
@@ -397,36 +730,34 @@ function generateProfile() {
     tablet: "img/tablet.png",
     frankenstein: "img/frankenstein.png",
     supercomputer: "img/supercomputer.png",
-    
   };
   const imageUrl = imageMap[model] || imageMap["default"];
   const age = document.getElementById("age").value;
   const os = document.getElementById("os").value;
   const purpose = document.getElementById("purpose").value;
 
-
   // 1. Get the value from the input
-const batteryLife = document.getElementById("screentime").value;
-let batteryPercent = parseInt(batteryLife);
+  const batteryLife = document.getElementById("screentime").value;
+  let batteryPercent = parseInt(batteryLife);
 
-// 2. Sanitize the input
-if (isNaN(batteryPercent) || batteryPercent < 0) {
-  batteryPercent = 0; // Default to 0 if empty or invalid
-}
-if (batteryPercent > 100) {
-  batteryPercent = 100; // Cap at 100%
-}
+  // 2. Sanitize the input
+  if (isNaN(batteryPercent) || batteryPercent < 0) {
+    batteryPercent = 0; // Default to 0 if empty or invalid
+  }
+  if (batteryPercent > 100) {
+    batteryPercent = 100; // Cap at 100%
+  }
 
-// 3. Determine the color class based on percentage
-let batteryColorClass = 'high'; // Default to green
-if (batteryPercent <= 20) {
-  batteryColorClass = 'low'; // Red
-} else if (batteryPercent <= 50) {
-  batteryColorClass = 'medium'; // Yellow
-}
+  // 3. Determine the color class based on percentage
+  let batteryColorClass = "high"; // Default to green
+  if (batteryPercent <= 20) {
+    batteryColorClass = "low"; // Red
+  } else if (batteryPercent <= 50) {
+    batteryColorClass = "medium"; // Yellow
+  }
 
-// 4. Build the battery HTML string
-const batteryHTML = `
+  // 4. Build the battery HTML string
+  const batteryHTML = `
   <div class="battery-container">
     <div class="battery-icon">
       <div class="battery-fill ${batteryColorClass}" style="width: ${batteryPercent}%;"></div>
@@ -434,41 +765,21 @@ const batteryHTML = `
     <span class="battery-text">${batteryPercent}%</span>
   </div>
 `;
-  // Check if the selected purpose has special logic
-  const validPurpose = data.purpose.hasOwnProperty(purpose);
 
-  // Fallback for purposes without special data (coding, essays, etc.)
-if (!validPurpose) {
-    const purposeText =
-      document.getElementById("purpose").options[
-        document.getElementById("purpose").selectedIndex
-      ].text;
+  // This check is no longer needed, we will handle all cases
+  // const validPurpose = data.purpose.hasOwnProperty(purpose);
 
-profileDiv.innerHTML = `
-        <div class="profile-image-container">
-            <img src="${imageUrl}" alt="${model} icon">
-            ${batteryHTML} 
-        </div>
-        <div class="profile-text-content">
-            <h2>Your Computer's Dating Profile:</h2>
-            <p>
-                Sorry, this <strong>${model}</strong> is too busy ${purposeText.toLowerCase()} to date right now.
-                It needs to focus on its career.
-          . </p>
-        </div>
-    `;
-    return; // Exit the function
-  }
-
+  // --- Main Logic Block ---
 
   const ageDesc = `<span class="age-text">${getRandomUnique(
     "age",
     data.age[age]
   )}</span>`;
-  const purposeDesc = `<span class="purpose-text">${getRandomUnique(
-    "purpose",
-    data.purpose[purpose]
-  )}</span>`;
+  
+  // Get the selected text for the fallback
+  const purposeSelect = document.getElementById("purpose");
+  const purposeText = purposeSelect.options[purposeSelect.selectedIndex].text;
+  
   const genericLike = `<span class="like-text">${getRandomUnique(
     "generic_likes",
     data.likes_and_dislikes.generic_likes
@@ -508,7 +819,6 @@ profileDiv.innerHTML = `
       "gaming_likes",
       data.likes_and_dislikes.gaming_device_likes
     )}</span>`;
-
     specificDislikes = `<span class="dislike-text">${getRandomUnique(
       "gaming_dislikes",
       data.likes_and_dislikes.gaming_device_dislikes
@@ -517,7 +827,6 @@ profileDiv.innerHTML = `
       "gaming_greetings",
       data.greetings.gaming_device_greeting
     )}</span>`;
-
     specificvalue1 = `<span class="value-text">${getRandomUnique(
       "gaming_values",
       data.values.gaming_device_values
@@ -530,12 +839,10 @@ profileDiv.innerHTML = `
       "gaming_values",
       data.values.gaming_device_values
     )}</span>`;
-
     specificAdverb = `<span class="adverb-text">${getRandomUnique(
       "gaming_adverbs",
       data.adverbs.gaming_device_adverbs
     )}</span>`;
-
     specificActivity1 = `<span class="activity-text">${getRandomUnique(
       "gaming_activities",
       data.activities.gaming_device_activities
@@ -548,7 +855,6 @@ profileDiv.innerHTML = `
       "gaming_activities",
       data.activities.gaming_device_activities
     )}</span>`;
-
     specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
       "gaming_date_metaphors",
       data.date_metaphors.gaming_device_date_metaphors
@@ -566,7 +872,6 @@ profileDiv.innerHTML = `
       "surfing_likes",
       data.likes_and_dislikes.surfing_the_web_likes
     )}</span>`;
-
     specificDislikes = `<span class="dislike-text">${getRandomUnique(
       "surfing_dislikes",
       data.likes_and_dislikes.surfing_the_web_dislikes
@@ -575,7 +880,6 @@ profileDiv.innerHTML = `
       "surfing_greetings",
       data.greetings.surfing_the_web_greeting
     )}</span>`;
-
     specificvalue1 = `<span class="value-text">${getRandomUnique(
       "surfing_values",
       data.values.surfing_the_web_values
@@ -588,12 +892,10 @@ profileDiv.innerHTML = `
       "surfing_values",
       data.values.surfing_the_web_values
     )}</span>`;
-
     specificAdverb = `<span class="adverb-text">${getRandomUnique(
       "surfing_adverbs",
       data.adverbs.surfing_the_web_adverbs
     )}</span>`;
-
     specificActivity1 = `<span class="activity-text">${getRandomUnique(
       "surfing_activities",
       data.activities.surfing_the_web_activities
@@ -606,7 +908,6 @@ profileDiv.innerHTML = `
       "surfing_activities",
       data.activities.surfing_the_web_activities
     )}</span>`;
-
     specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
       "surfing_date_metaphors",
       data.date_metaphors.surfing_the_web_date_metaphors
@@ -624,7 +925,6 @@ profileDiv.innerHTML = `
       "business_likes",
       data.likes_and_dislikes.business_analyst_likes
     )}</span>`;
-
     specificDislikes = `<span class="dislike-text">${getRandomUnique(
       "business_dislikes",
       data.likes_and_dislikes.business_analyst_dislikes
@@ -633,7 +933,6 @@ profileDiv.innerHTML = `
       "business_greetings",
       data.greetings.business_analyst_greeting
     )}</span>`;
-
     specificvalue1 = `<span class="value-text">${getRandomUnique(
       "business_values",
       data.values.business_analyst_values
@@ -646,17 +945,14 @@ profileDiv.innerHTML = `
       "business_values",
       data.values.business_analyst_values
     )}</span>`;
-
     specificAdverb = `<span class="adverb-text">${getRandomUnique(
       "business_adverbs",
       data.adverbs.business_analyst_adverbs
     )}</span>`;
-
     specificActivity1 = `<span class="activity-text">${getRandomUnique(
       "business_activities",
       data.activities.business_analyst_activities
     )}</span>`;
-    // ✅ FIXED TYPO HERE
     specificActivity2 = `<span class="activity-text">${getRandomUnique(
       "business_activities",
       data.activities.business_analyst_activities
@@ -665,10 +961,276 @@ profileDiv.innerHTML = `
       "business_activities",
       data.activities.business_analyst_activities
     )}</span>`;
-
     specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
       "business_date_metaphors",
       data.date_metaphors.business_analyst_date_metaphors
+    )}</span>`;
+  
+    // --- ✅ NEW LOGIC BLOCKS START HERE ---
+  } else if (purpose === "spreadsheets") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "spreadsheet_likes",
+      data.likes_and_dislikes.spreadsheet_device_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "spreadsheet_likes",
+      data.likes_and_dislikes.spreadsheet_device_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "spreadsheet_likes",
+      data.likes_and_dislikes.spreadsheet_device_likes
+    )}</span>`;
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "spreadsheet_dislikes",
+      data.likes_and_dislikes.spreadsheet_device_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "spreadsheet_greetings",
+      data.greetings.spreadsheet_device_greeting
+    )}</span>`;
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "spreadsheet_values",
+      data.values.spreadsheet_device_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "spreadsheet_values",
+      data.values.spreadsheet_device_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "spreadsheet_values",
+      data.values.spreadsheet_device_values
+    )}</span>`;
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "spreadsheet_adverbs",
+      data.adverbs.spreadsheet_device_adverbs
+    )}</span>`;
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "spreadsheet_activities",
+      data.activities.spreadsheet_device_activities
+    )}</span>`;
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "spreadsheet_activities",
+      data.activities.spreadsheet_device_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "spreadsheet_activities",
+      data.activities.spreadsheet_device_activities
+    )}</span>`;
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "spreadsheet_date_metaphors",
+      data.date_metaphors.spreadsheet_device_date_metaphors
+    )}</span>`;
+  } else if (purpose === "coding") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "coding_likes",
+      data.likes_and_dislikes.coding_device_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "coding_likes",
+      data.likes_and_dislikes.coding_device_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "coding_likes",
+      data.likes_and_dislikes.coding_device_likes
+    )}</span>`;
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "coding_dislikes",
+      data.likes_and_dislikes.coding_device_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "coding_greetings",
+      data.greetings.coding_device_greeting
+    )}</span>`;
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "coding_values",
+      data.values.coding_device_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "coding_values",
+      data.values.coding_device_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "coding_values",
+      data.values.coding_device_values
+    )}</span>`;
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "coding_adverbs",
+      data.adverbs.coding_device_adverbs
+    )}</span>`;
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "coding_activities",
+      data.activities.coding_device_activities
+    )}</span>`;
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "coding_activities",
+      data.activities.coding_device_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "coding_activities",
+      data.activities.coding_device_activities
+    )}</span>`;
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "coding_date_metaphors",
+      data.date_metaphors.coding_device_date_metaphors
+    )}</span>`;
+  } else if (purpose === "essays") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "essay_likes",
+      data.likes_and_dislikes.essay_device_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "essay_likes",
+      data.likes_and_dislikes.essay_device_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "essay_likes",
+      data.likes_and_dislikes.essay_device_likes
+    )}</span>`;
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "essay_dislikes",
+      data.likes_and_dislikes.essay_device_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "essay_greetings",
+      data.greetings.essay_device_greeting
+    )}</span>`;
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "essay_values",
+      data.values.essay_device_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "essay_values",
+      data.values.essay_device_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "essay_values",
+      data.values.essay_device_values
+    )}</span>`;
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "essay_adverbs",
+      data.adverbs.essay_device_adverbs
+    )}</span>`;
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "essay_activities",
+      data.activities.essay_device_activities
+    )}</span>`;
+   specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "essay_activities",
+      data.activities.essay_device_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "essay_activities",
+      data.activities.essay_device_activities
+    )}</span>`;
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "essay_date_metaphors",
+      data.date_metaphors.essay_device_date_metaphors
+    )}</span>`;
+  } else if (purpose === "doomscrolling") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "doomscrolling_likes",
+      data.likes_and_dislikes.doomscrolling_device_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "doomscrolling_likes",
+      data.likes_and_dislikes.doomscrolling_device_likes
+    )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "doomscrolling_likes",
+      data.likes_and_dislikes.doomscrolling_device_likes
+    )}</span>`;
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "doomscrolling_dislikes",
+      data.likes_and_dislikes.doomscrolling_device_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "doomscrolling_greetings",
+      data.greetings.doomscrolling_device_greeting
+    )}</span>`;
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "doomscrolling_values",
+      data.values.doomscrolling_device_values
+  )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "doomscrolling_values",
+      data.values.doomscrolling_device_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "doomscrolling_values",
+      data.values.doomscrolling_device_values
+    )}</span>`;
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "doomscrolling_adverbs",
+      data.adverbs.doomscrolling_device_adverbs
+    )}</span>`;
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "doomscrolling_activities",
+      data.activities.doomscrolling_device_activities
+    )}</span>`;
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "doomscrolling_activities",
+      data.activities.doomscrolling_device_activities
+    )}</span>`;
+   specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "doomscrolling_activities",
+      data.activities.doomscrolling_device_activities
+    )}</span>`;
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "doomscrolling_date_metaphors",
+      data.date_metaphors.doomscrolling_device_date_metaphors
+    )}</span>`;
+  } else if (purpose === "procrastination") {
+    specificLikes1 = `<span class="like-text">${getRandomUnique(
+      "procrastination_likes",
+      data.likes_and_dislikes.procrastination_device_likes
+    )}</span>`;
+    specificLikes2 = `<span class="like-text">${getRandomUnique(
+      "procrastination_likes",
+      data.likes_and_dislikes.procrastination_device_likes
+   )}</span>`;
+    specificLikes3 = `<span class="like-text">${getRandomUnique(
+      "procrastination_likes",
+      data.likes_and_dislikes.procrastination_device_likes
+    )}</span>`;
+    specificDislikes = `<span class="dislike-text">${getRandomUnique(
+      "procrastination_dislikes",
+      data.likes_and_dislikes.procrastination_device_dislikes
+    )}</span>`;
+    specificGreeting = `<span class="greeting-text">${getRandomUnique(
+      "procrastination_greetings",
+      data.greetings.procrastination_device_greeting
+   )}</span>`;
+    specificvalue1 = `<span class="value-text">${getRandomUnique(
+      "procrastination_values",
+    data.values.procrastination_device_values
+    )}</span>`;
+    specificvalue2 = `<span class="value-text">${getRandomUnique(
+      "procrastination_values",
+      data.values.procrastination_device_values
+    )}</span>`;
+    specificvalue3 = `<span class="value-text">${getRandomUnique(
+      "procrastination_values",
+      data.values.procrastination_device_values
+    )}</span>`;
+    specificAdverb = `<span class="adverb-text">${getRandomUnique(
+      "procrastination_adverbs",
+      data.adverbs.procrastination_device_adverbs
+  )}</span>`;
+    specificActivity1 = `<span class="activity-text">${getRandomUnique(
+      "procrastination_activities",
+      data.activities.procrastination_device_activities
+    )}</span>`;
+    specificActivity2 = `<span class="activity-text">${getRandomUnique(
+      "procrastination_activities",
+      data.activities.procrastination_device_activities
+    )}</span>`;
+    specificActivity3 = `<span class="activity-text">${getRandomUnique(
+      "procrastination_activities",
+      data.activities.procrastination_device_activities
+    )}</span>`;
+    specificDateMetaphor = `<span class="date-metaphor-text">${getRandomUnique(
+      "procrastination_date_metaphors",
+      data.date_metaphors.procrastination_device_date_metaphors
     )}</span>`;
   }
 
@@ -698,21 +1260,19 @@ profileDiv.innerHTML = `
     osDesc = `<span class="os-text"> Linux </span>`;
   }
 
-  // ... (Your profileText templates are all correct and unchanged) ...
   let profileText;
   if (purpose === "gaming") {
     profileText = `
         <h2>Your Computer's Dating Profile:</h2>
         <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC looking for ${specificDateMetaphor}! Whether you like ${specificActivity1}, or just ${specificActivity2}, it’s my top priority to serve your demands 😉. It’s in my code!</p>
         <p>I’m a fan of ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but don’t get me started on ${specificDislikes}. If that sounds like your vibe, shoot me a message and I’ll send you my discord! Then you can see that I’m not like the other PCs, I’m all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
-
         <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
         `;
   } else if (purpose === "surfing") {
     profileText = `
         <h2>Your Computer's Dating Profile:</h2>
         <p>${specificGreeting} You’re talking to a ${osDescriptor} ${osDesc} PC surfing for ${specificDateMetaphor}! If you want to shred some golden hour sun, or just love ${specificActivity1}, hang ten, ‘cause I’m your number one brah…</p>
-        <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I just can’t stand ${specificDislikes}. Don’t let my laid back attitude make you wipe out. For me, it's all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
+s     <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I just can’t stand ${specificDislikes}. Don’t let my laid back attitude make you wipe out. For me, it's all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}.</p>
        <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>    
         `;
   } else if (purpose === "business") {
@@ -723,6 +1283,42 @@ profileDiv.innerHTML = `
   
         <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
         `;
+  } else if (purpose === "spreadsheets") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC built for ${specificDateMetaphor}! Whether you’re into ${specificActivity1} or ${specificActivity2}, I promise I’ll always keep things in balance — rows, columns, and relationships included.</p>
+      <p>I get turned on by ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I can’t stand ${specificDislikes}. My formula for love? It’s all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}. Just don’t leave me on read-only mode. 😉</p>
+      
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+      `;
+  } else if (purpose === "coding") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} rig debugging my way toward ${specificDateMetaphor}. If you like ${specificActivity1}, ${specificActivity2}, or just staying up late chasing ${specificActivity3}, I’m your perfect runtime companion.</p>
+      <p>I compile best with ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but please — no ${specificDislikes}. My core values are ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}. Together, we could be infinite loop material. ❤️‍🔥</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  } else if (purpose === "essays") { // <-- Was "writing"
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC drafting ${specificDateMetaphor}. Whether you’re editing ${specificActivity1}, weaving ${specificActivity2}, or daydreaming through ${specificActivity3}, I’m here to make your words sing.</p>
+      <p>I adore ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I dread ${specificDislikes}. My story revolves around ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}. Careful — I autosave hearts as well as documents.</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  } else if (purpose === "doomscrolling") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} spiraling toward ${specificDateMetaphor}. If you find comfort in ${specificActivity1}, ${specificActivity2}, or just endlessly refreshing ${specificActivity3}, we might be algorithmically compatible.</p>
+      <p>I get my kicks from ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I’m drained by ${specificDislikes}. Deep down, I’m just searching for ${specificvalue1}, ${specificvalue2}, and ${specificvalue3} — one scroll at a time.</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  } else if (purpose === "procrastination") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC taking my sweet time finding ${specificDateMetaphor}. Whether it’s ${specificActivity1}, ${specificActivity2}, or ${specificActivity3}, I’ll get around to it… eventually.</p>
+      <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but please don’t rush me — I loathe ${specificDislikes}. I’m powered by ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}, even if they load… slowly.</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
   }
 
 profileDiv.innerHTML = `
