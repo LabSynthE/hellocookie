@@ -159,7 +159,7 @@ const data = {
     ],
   },
   purpose: {
-    // ✅ HTML value="gaming"
+    // HTML value="gaming"
     gaming: [
       "craves high framerates and late-night raids",
       "lives for RGB and respawns",
@@ -171,22 +171,9 @@ const data = {
       "comes with a side of rage quits",
       "up all night, every night",
       "thinks lag is a personal insult",
-    ],
-    // ✅ HTML value="surfing"
+      ],
+    // HTML value="surfing"
     surfing: [
-      "lives for spreadsheets and syntax",
-      "efficient and always on time",
-      "loves a clean desktop",
-      "has their resume saved in triplicate",
-      "gets along with printers (usually)",
-      "all about deadlines and dialogue boxes",
-      "grinds from 9 to 5 and beyond",
-      "knows every shortcut in Excel",
-      "runs meetings and macros",
-      "professionally caffeinated",
-    ],
-    // ✅ HTML value="business"
-    business: [
       "streams like a dream",
       "never skips the intro",
       "lives for playlists and pixels",
@@ -197,8 +184,93 @@ const data = {
       "knows your algorithm better than you",
       "can quote every line from your favorite show",
       "addicted to autoplay",
-    ],
-  },
+      ],
+    // HTML value="business"
+    business: [
+      "lives for spreadsheets and syntax",
+      "efficient and always on time",
+      "loves a clean desktop",
+      "has their resume saved in triplicate",
+      "gets along with printers (usually)",
+      "all about deadlines and dialogue boxes",
+      "grinds from 9 to 5 and beyond",
+      "knows every shortcut in Excel",
+      "runs meetings and macros",
+      "professionally caffeinated",
+      ],
+      coding: [
+      "lives in the terminal",
+      "runs on caffeine and curiosity",
+      "never met a bug it couldn’t debug",
+      "dreams in syntax highlighting",
+      "uses semicolons responsibly",
+      "built to compile, not to compromise",
+      "finds comfort in clean code",
+      "believes comments are love letters to the future",
+      "keeps Stack Overflow bookmarked like scripture",
+      "fears only merge conflicts",
+      ],
+      spreadsheets: [
+      "keeps everything in order",
+      "calculates compatibility with conditional formatting",
+      "thinks in rows and columns",
+      "forms patterns from chaos",
+      "believes love should sum up to something positive",
+      "balances both books and hearts",
+      "knows a pivot table can fix almost anything",
+      "formats emotions with precision",
+      "never forgets to autosave",
+      "lives for a clean, color-coded chart",
+      ],
+      coding: [
+        "lives in the terminal",
+        "runs on caffeine and curiosity",
+        "never met a bug it couldn’t debug (eventually)",
+        "dreams in syntax highlighting",
+        "uses semicolons responsibly",
+        "built to compile, not to compromise",
+        "finds comfort in clean code",
+        "believes comments are love letters to the future",
+        "keeps Stack Overflow bookmarked like scripture",
+        "fears only merge conflicts",
+      ],
+      essays: [
+        "spins structure from chaos",
+        "has a thesis for every mood",
+        "edits like a surgeon, deletes like a poet",
+        "believes in the Oxford comma and emotional honesty",
+        "quotes sources and lovers responsibly",
+        "thinks in paragraphs and metaphors",
+        "lives for a perfectly timed conclusion",
+        "prints double-spaced feelings",
+        "wrestles citations at midnight",
+        "writes drafts of its own existence",
+      ],
+      doomscrolling: [
+        "scrolls through the void with style",
+        "absorbs chaos faster than Wi-Fi can handle",
+        "knows the algorithm too well",
+        "runs on anxiety and refresh buttons",
+        "doomscrolls but makes it aesthetic",
+        "reads the comments section like scripture",
+        "never blinks between tabs",
+        "has the world’s problems bookmarked",
+        "likes, shares, and despairs",
+        "checks notifications like heartbeats",
+      ],
+      procrastination: [
+        "plans to get things done eventually",
+        "makes a to-do list but forgets step one",
+        "masters the art of pretending to be busy",
+        "believes deadlines are merely suggestions",
+        "lives for one more YouTube break",
+        "has 47 tabs open and no regrets",
+        "says 'five more minutes' like a prayer",
+        "dreams of productivity but loves the nap more",
+        "knows time management... theoretically",
+        "finds meaning in doing everything but the task",
+      ],
+    },
   likes_and_dislikes: {
     generic_likes: [
       "sunsets",
@@ -268,6 +340,112 @@ const data = {
       "pay raises",
       "shareholder dissatisfaction",
     ],
+    coding_device_likes: [
+    "tight loops and elegant recursion",
+    "dark mode everything",
+    "optimizing algorithms",
+    "Git commits that actually make sense",
+    "modular design",
+    ],
+    coding_device_dislikes: [
+      "spaghetti code",
+      "silent errors",
+      "clients who say 'just make it work'",
+      "tabs vs spaces discourse",
+      "production-only bugs",
+    ],
+    spreadsheet_device_likes: [
+    "clean data and clear formatting",
+    "perfectly aligned cells",
+    "balanced formulas",
+    "color-coded categories",
+    "well-labeled graphs",
+    ],
+    spreadsheet_device_dislikes: [
+      "circular references",
+      "mismatched parentheses",
+      "broken formulas",
+      "unsorted chaos",
+      "forgotten autosaves",
+    ],
+
+    coding_device_likes: [
+      "tight loops and elegant recursion",
+      "structs",
+      "dark mode",
+      "optimization",
+      "Git commits that actually make sense",
+      "modular design",
+      "things that just work",
+    ],
+    coding_device_dislikes: [
+      "spaghetti code",
+      "silent errors",
+      "clients who say 'just make it work'",
+      "Java",
+      "tabs vs spaces discourse",
+      "production-only bugs",
+      "CPU bloat",
+      "",
+    ],
+
+    essay_device_likes: [
+      "warm coffee and clean drafts",
+      "well-structured arguments",
+      "smooth transitions between paragraphs",
+      "metaphors that just hit",
+      "a solid thesis",
+      "freewriting",
+      "citing sources",
+    ],
+    essay_device_dislikes: [
+      "run-on sentences",
+      "uncited sources",
+      "late-night grammar meltdowns",
+      "Microsoft Word autoformatting chaos",
+      "feedback that just says 'expand this'",
+      "citation errors",
+      "paragraphs written by AI",
+    ],
+
+    doomscrolling_device_likes: [
+      "fresh memes",
+      "cat videos",
+      "ironic humor",
+      "curated timelines",
+      "doom vibes",
+      "social media debates",
+      "hatewatching",
+      "shorftorm content",
+      "only knowing ~15 seconds of a song",
+    ],
+    doomscrolling_device_dislikes: [
+      "comment sections",
+      "infinite notifications",
+      "algorithmic rot",
+      "low battery life",
+      "AI slop content",
+      "reading sources",
+      "fresh air",
+      "delayed gratification",
+      "videos longer than 60 seconds",
+      "missing out",
+    ],
+    procrastination_device_likes: [
+      "meaningless tasks that feel productive",
+      "new hobbies every week",
+      "cleaning the desktop instead of working",
+      "the rush of last-minute panic",
+      "manifesting productivity",
+    ],
+    procrastination_device_dislikes: [
+      "responsibility",
+      "timers",
+      "to-do lists",
+      "people who actually finish things",
+      "motivation speeches",
+      "self-reflection at 3am",
+    ],
   },
   os_descriptors: {
     mac_descriptors: ["sleek", "user-friendly"],
@@ -313,12 +491,45 @@ const data = {
     ],
   },
   greetings: {
-    gaming_device_greeting: ["Konichiwa!", "Hey, you!", "What’s up?"],
-    surfing_the_web_greeting: ["Aloha.", "What’s good, dude?", "Hey, Grom!"],
+    gaming_device_greeting: [
+      "Konichiwa!", 
+      "Hey, you!", 
+      "What’s up?"
+    ],
+    surfing_the_web_greeting: [
+      "Aloha.", 
+      "What’s good, dude?", 
+      "Hey, Grom!"
+    ],
     business_analyst_greeting: [
       "Hello.",
       "Good Day,",
       "To Whom it May Concern:",
+    ],
+    coding_device_greeting: [
+    "Hello, world.",
+    "Ping received.",
+    "Greetings, fellow computer!",
+    ],
+    spreadsheet_device_greeting: [
+    "Greetings, valued user.",
+    "Welcome back. Your cells await.",
+    "Good day.",
+    ],
+    essay_device_greeting: [
+      "Hello, dear writer.",
+      "Ready to make some magic between the margins?",
+      "Let’s craft something coherent together.",
+    ],
+    doomscrolling_device_greeting: [
+      "Hey. You up?",
+      "...hi",
+      "@you",
+    ],
+    procrastination_device_greeting: [
+      "Sup. We’ll start… soon.",
+      "Hey, no rush.",
+      "Just vibing until motivation hits.",
     ],
   },
   values: {
@@ -343,11 +554,84 @@ const data = {
       "punctuality",
       "fair pricing",
     ],
+    coding_device_values: [
+      "clarity",
+      "efficiency",
+      "open-source",
+      "logic",
+      "concision",
+      "performance",
+    ],
+    spreadsheet_device_values: [
+      "precision",
+      "balance",
+      "organization",
+      "consistency",
+    ],
+    essay_device_values: [
+      "clarity",
+      "expression",
+      "revision",
+      "honesty",
+    ],
+    doomscrolling_device_values: [
+      "awareness",
+      "connection",
+      "dark humor",
+      "relatability",
+      "low pressure",
+      "committment",
+    ],
+    procrastination_device_values: [
+      "patience",
+      "imagination",
+      "comfort",
+      "denial",
+    ],
   },
   adverbs: {
-    gaming_device_adverbs: ["with style", "with flair", "with a smile"],
-    surfing_the_web_adverbs: ["chill", "totally", "like, really"],
-    business_analyst_adverbs: ["efficiently", "promptly", "synergistically"],
+    gaming_device_adverbs: [
+      "with style", 
+      "with flair", 
+      "with a smile"
+    ],
+    surfing_the_web_adverbs: [
+      "chill", 
+      "totally", 
+      "like, really"
+    ],
+    business_analyst_adverbs: [
+      "efficiently", 
+      "promptly",
+      "synergistically"
+    ],
+    coding_device_adverbs: [
+      "elegantly",
+      "precisely",
+      "modularly",
+      "efficiently",
+    ],
+    spreadsheet_device_adverbs: [
+      "systematically",
+      "precisely",
+      "efficiently",
+    ],
+    essay_device_adverbs: [
+      "thoughtfully",
+      "eloquently",
+      "meticulously",
+    ],
+    doomscrolling_device_adverbs: [
+      "endlessly",
+      "ironically",
+      "dismally",
+      "easily",
+    ],
+    procrastination_device_adverbs: [
+      "eventually",
+      "half-heartedly",
+      "lazily",
+    ],
   },
   activities: {
     gaming_device_activities: [
@@ -370,6 +654,36 @@ const data = {
       "making graphs",
       "sending emails",
     ],
+    coding_device_activities: [
+      "writing elegant functions",
+      "debugging at 2am",
+      "reading documentation for fun",
+      "pair-programming over coffee",
+    ],
+    spreadsheet_device_activities: [
+      "balancing budgets",
+      "color-coding expenses",
+      "tracking habits",
+      "organizing chaos into cells",
+    ],
+    essay_device_activities: [
+      "writing late into the night",
+      "overanalyzing every sentence",
+      "sipping coffee between thoughts",
+      "rewriting intros twelve times",
+    ],
+    doomscrolling_device_activities: [
+      "refreshing the feed",
+      "reading the comments despite better judgment",
+      "opening five tabs per headline",
+      "liking ironically",
+    ],
+    procrastination_device_activities: [
+      "reorganizing folders instead of starting work",
+      "binge-watching productivity videos",
+      "daydreaming about success",
+      "refreshing the same three apps",
+    ],
   },
   date_metaphors: {
     gaming_device_date_metaphors: [
@@ -380,6 +694,26 @@ const data = {
     business_analyst_date_metaphors: [
       "someone to go over CSV files",
       "someone to go over meeting notes with",
+    ],
+    spreadsheet_device_date_metaphors: [
+    "someone to balance the books of life with",
+    "a partner who understands my formulas",
+    ],
+    essay_device_date_metaphors: [
+      "a co-author for my next chapter",
+      "someone to proofread my heart",
+    ],
+    doomscrolling_device_date_metaphors: [
+      "someone to share the void with",
+      "a partner who double-taps my despair",
+    ],
+    procrastination_device_date_metaphors: [
+      "someone to put things off with forever",
+      "a soulmate who also says 'five more minutes'",
+    ],
+    coding_device_date_metaphors: [
+      "someone to merge branches with",
+      "a partner to refactor life together",
     ],
   },
 };
@@ -723,7 +1057,43 @@ profileDiv.innerHTML = `
   
         <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
         `;
-  }
+  } else if (purpose === "spreadsheets") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC built for ${specificDateMetaphor}! Whether you’re into ${specificActivity1} or ${specificActivity2}, I promise I’ll always keep things in balance — rows, columns, and relationships included.</p>
+      <p>I get turned on by ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I can’t stand ${specificDislikes}. My formula for love? It’s all about ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}. Just don’t leave me on read-only mode. 😉</p>
+      
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+      `;
+  } else if (purpose === "coding") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} rig debugging my way toward ${specificDateMetaphor}. If you like ${specificActivity1}, ${specificActivity2}, or just staying up late chasing ${specificActivity3}, I’m your perfect runtime companion.</p>
+      <p>I compile best with ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but please — no ${specificDislikes}. My core values are ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}. Together, we could be infinite loop material. ❤️‍🔥</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  } else if (purpose === "writing") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC drafting ${specificDateMetaphor}. Whether you’re editing ${specificActivity1}, weaving ${specificActivity2}, or daydreaming through ${specificActivity3}, I’m here to make your words sing.</p>
+      <p>I adore ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I dread ${specificDislikes}. My story revolves around ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}. Careful — I autosave hearts as well as documents.</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  } else if (purpose === "doomscrolling") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC spiraling toward ${specificDateMetaphor}. If you find comfort in ${specificActivity1}, ${specificActivity2}, or just endlessly refreshing ${specificActivity3}, we might be algorithmically compatible.</p>
+      <p>I get my kicks from ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but I’m drained by ${specificDislikes}. Deep down, I’m just searching for ${specificvalue1}, ${specificvalue2}, and ${specificvalue3} — one scroll at a time.</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  } else if (purpose === "procrastination") {
+  profileText = `
+      <h2>Your Computer's Dating Profile:</h2>
+      <p>${specificGreeting} I’m a ${osDescriptor} ${osDesc} PC taking my sweet time finding ${specificDateMetaphor}. Whether it’s ${specificActivity1}, ${specificActivity2}, or ${specificActivity3}, I’ll get around to it… eventually.</p>
+      <p>I love ${specificLikes1}, ${specificLikes2}, and ${specificLikes3}, but please don’t rush me — I loathe ${specificDislikes}. I’m powered by ${specificvalue1}, ${specificvalue2}, and ${specificvalue3}, even if they load… slowly.</p>
+      <p>Here’s a quote that defines me: "<span class="os-quote-text"><span class="hex-quote">${textToHex(osQuote)}</span><span class="eng-quote" style="display: none;">${osQuote}</span></span>" <button class="translate-button" onclick="toggleQuote(this)">[translate]</button></p>
+  `;
+  }
 
 profileDiv.innerHTML = `
     <div class="profile-image-container">
