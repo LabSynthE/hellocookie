@@ -693,10 +693,8 @@ const data = {
     ],
   },
 };
-// --- End of your data and helpers ---
 
 
-// --- ✅ NEW: Main Logic for BOTH pages ---
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- Logic for ALL pages ---
@@ -742,10 +740,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/**
- * ✅ NEW: This function ONLY runs on INDEX.HTML
- * It grabs the data and redirects to profile.html
- */
+
 function generateProfile() {
   // 1. Get all values from the form
   const model = document.getElementById("model").value;
@@ -776,10 +771,7 @@ function generateProfile() {
 }
 
 
-/**
- * ✅ NEW: This function ONLY runs on PROFILE.HTML
- * This is all YOUR new logic, adapted to read from the 'profileData' object
- */
+
 function displayProfile(profileData) {
   // Find the profile div on profile.html
   const profileDiv = document.getElementById("profile");
@@ -1312,7 +1304,6 @@ function displayProfile(profileData) {
     osDesc = `<span class="os-text"> Linux </span>`;
   }
 
-  // ... (Your profileText templates are all correct and unchanged) ...
   let profileText;
   if (purpose === "gaming") {
     profileText = `
@@ -1375,7 +1366,6 @@ function displayProfile(profileData) {
   `;
   }
 
-  // --- Final HTML Injection ---
   profileDiv.innerHTML = `
     <div class="profile-image-container">
         <img src="${imageUrl}" alt="${model} icon">
